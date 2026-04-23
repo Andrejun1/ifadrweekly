@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Data | Informatika</title>
+  </head>
+  <body>
+    <table
+      border="1"
+      cellspacing="0"
+      cellpadding="10"
+      align="center"
+      text-align="center"
+      style="margin-top: 20px"
+    >
+      <tr>
+        <td><a href="index.html">Home</a></td>
+        <td><a href="contact.html">Contact</a></td>
+        <td><a href="about.html">About</a></td>
+        <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+      </tr>
+    </table>
+    <h2 align="center">Tambah Data</h2>
+    <form action="mahasiswa.html" method="post">
+      <table cellspacing="0" cellpadding="5">
+        <tr>
+          <td label="Nama">Nama</label></td>
+          <td>:</td>
+          <td><input type="text" name="nama" id="nama" /></td>
+        </tr>
+
+        <tr>
+          <td label="Foto">Foto</label></td>
+          <td>:</td>
+          <td><input type="file" name="foto" id="foto" /></td>
+        </tr>
+
+        <tr>
+          <td label="UTS">UTS</label></td>
+          <td>:</td>
+          <td><input type="number" name="uts" id="uts" /></td>
+        </tr>
+
+        <tr>
+          <td label="UAS">UAS</label></td>
+          <td>:</td>
+          <td><input type="number" name="uas" id="uas" /></td>
+        </tr>
+
+        <tr>
+          <td label="Tugas">Tugas</label></td>
+          <td>:</td>
+          <td><input type="number" name="tugas" id="tugas" /></td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="text-align: center">
+            <button type="submit">Tambah Data</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <br />
+    <br />
+    <a href="mahasiswa.html">back</a>
+  </body>
+</html>
