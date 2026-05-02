@@ -6,14 +6,8 @@
     <title>Tambah Data | Informatika</title>
   </head>
   <body>
-    <table
-      border="1"
-      cellspacing="0"
-      cellpadding="10"
-      align="center"
-      text-align="center"
-      style="margin-top: 20px"
-    >
+    <link rel="stylesheet" href="tambahdata.css" />
+    <table class="table">
       <tr>
         <td><a href="index.html">Home</a></td>
         <td><a href="contact.html">Contact</a></td>
@@ -23,46 +17,46 @@
     </table>
     <h2 align="center">Tambah Data</h2>
     <form action="mahasiswa.html" method="post">
-      <table cellspacing="0" cellpadding="5">
+      <table class="table">
         <tr>
           <td label="Nama">Nama</label></td>
           <td>:</td>
-          <td><input type="text" name="nama" id="nama" /></td>
+          <td><input type="text" name="nama" id="nama" class="input" /></td>
         </tr>
 
         <tr>
           <td label="Foto">Foto</label></td>
           <td>:</td>
-          <td><input type="file" name="foto" id="foto" /></td>
+          <td><input type="file" name="foto" id="foto" class="input-file" /></td>
         </tr>
 
         <tr>
           <td label="UTS">UTS</label></td>
           <td>:</td>
-          <td><input type="number" name="uts" id="uts" /></td>
+          <td><input type="number" name="uts" id="uts" class="input" /></td>
         </tr>
 
         <tr>
           <td label="UAS">UAS</label></td>
           <td>:</td>
-          <td><input type="number" name="uas" id="uas" /></td>
+          <td><input type="number" name="uas" id="uas" class="input" /></td>
         </tr>
 
         <tr>
           <td label="Tugas">Tugas</label></td>
           <td>:</td>
-          <td><input type="number" name="tugas" id="tugas" /></td>
+          <td><input type="number" name="tugas" id="tugas" class="input" /></td>
         </tr>
 
         <tr>
           <td colspan="3" style="text-align: center">
-            <button type="submit">Tambah Data</button>
+            <button type="submit" class="btn">Tambah Data</button>
           </td>
         </tr>
       </table>
     </form>
     <br />
     <br />
-    <a href="mahasiswa.html">back</a>
+    <a href="mahasiswa.html" class="btn">back</a>
   </body>
 </html>
