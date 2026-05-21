@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Tambah Data | Informatika</title>
-
-    <link rel="stylesheet" href="assets/style/tambahdata.css" />
   </head>
-
   <body>
-
+    <link rel="stylesheet" href="assets/style/tambahdata.css" />
     <table class="table">
       <tr>
         <td><a href="index.html">Home</a></td>
@@ -19,98 +15,48 @@
         <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
       </tr>
     </table>
-
     <h2 align="center">Tambah Data</h2>
-
-    <form action="proses.php" method="POST" enctype="multipart/form-data">
-
+    <form action="mahasiswa.html" method="post">
       <table class="table">
-
         <tr>
-          <td><label for="nama">Nama</label></td>
+          <td label="Nama">Nama</label></td>
           <td>:</td>
-          <td>
-            <input
-              type="text"
-              name="nama"
-              id="nama"
-              class="input"
-              required
-            />
-          </td>
+          <td><input type="text" name="nama" id="nama" class="input" /></td>
         </tr>
 
         <tr>
-          <td><label for="foto">Foto</label></td>
+          <td label="Foto">Foto</label></td>
           <td>:</td>
-          <td>
-            <input
-              type="file"
-              name="foto"
-              id="foto"
-              class="input-file"
-              required
-            />
-          </td>
+          <td><input type="file" name="foto" id="foto" class="input-file" /></td>
         </tr>
 
         <tr>
-          <td><label for="uts">UTS</label></td>
+          <td label="UTS">UTS</label></td>
           <td>:</td>
-          <td>
-            <input
-              type="number"
-              name="uts"
-              id="uts"
-              class="input"
-              required
-            />
-          </td>
+          <td><input type="number" name="uts" id="uts" class="input" /></td>
         </tr>
 
         <tr>
-          <td><label for="uas">UAS</label></td>
+          <td label="UAS">UAS</label></td>
           <td>:</td>
-          <td>
-            <input
-              type="number"
-              name="uas"
-              id="uas"
-              class="input"
-              required
-            />
-          </td>
+          <td><input type="number" name="uas" id="uas" class="input" /></td>
         </tr>
 
         <tr>
-          <td><label for="tugas">Tugas</label></td>
+          <td label="Tugas">Tugas</label></td>
           <td>:</td>
-          <td>
-            <input
-              type="number"
-              name="tugas"
-              id="tugas"
-              class="input"
-              required
-            />
-          </td>
+          <td><input type="number" name="tugas" id="tugas" class="input" /></td>
         </tr>
 
         <tr>
           <td colspan="3" style="text-align: center">
-            <button type="submit" class="btn">
-              Tambah Data
-            </button>
+            <button type="submit" class="btn">Tambah Data</button>
           </td>
         </tr>
-
       </table>
-
     </form>
-
-    <br><br>
-
-    <a href="mahasiswa.html" class="btn">Back</a>
-
+    <br />
+    <br />
+    <a href="mahasiswa.html" class="btn">back</a>
   </body>
 </html>
