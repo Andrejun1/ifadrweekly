@@ -17,16 +17,16 @@
     </center>
     <table class="table">
       <tr>
-          <td><a href="index.html">Home</a></td>
-          <td><a href="contact.html">Contact</a></td>
-          <td><a href="about.html">About</a></td>
-          <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+          <td><a href="index.php">Home</a></td>
+          <td><a href="contact.php">Contact</a></td>
+          <td><a href="about.php">About</a></td>
+          <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
       </tr>
     </table>
 
     <h2 align="center">Data Mahasiswa</h2>
 
-    <a href="tambahdata.html" style="display: block; text-align: center; margin-top: 20px">
+    <a href="tambahdata.php" style="display: block; text-align: center; margin-top: 20px">
       <button>
         Tambah Mahasiswa
       </button>
@@ -34,75 +34,27 @@
 
     <table class="table">
       <tr>
-        <th rowspan="2">No</th>
-        <th rowspan="2">Nama</th>
-        <th rowspan="2">Foto</th>
-        <th colspan="3">Nilai</th>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Program Studi</th>
+        <th>Email</th>
+        <th>No. HP</th>
+        <th>Foto</th>
+        <th>Aksi</th>
       </tr>
       <tr>
-        <td>UTS</td>
-        <td>UAS</td>
-        <td>TUGAS</td>
-      </tr>
-      <tr align="center">
-        <td>1</td>
-        <td>Andre Junika</td>
+        <td aligh="center">1</td>
+        <td>Andre Junika Yusuf</td>
+        <td>13182420061</td>
+        <td>Informatika</td>
+        <td>andrejunika05@gmail.com</td>
+        <td>089234523523</td>
+        <td><img src="assets/images/andre.png" alt="andre" width="60px"></td>
         <td>
-          <img src="assets/images/andre.png" alt="Foto Andre" width="60" />
+          <a href="editdata.php?id=1">Edit</a> |
+          <a href="hapusdata.php?id=1" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
         </td>
-        <td>80</td>
-        <td>85</td>
-        <td>90</td>
       </tr>
-      <tr align="center">
-        <td>2</td>
-        <td>Rizky Pratama</td>
-        <td>
-          <img src="assets/images/rizky.png" alt="Foto Rizky" width="60" />
-        </td>
-        <td>75</td>
-        <td>80</td>
-        <td>85</td>
-      </tr>
-      <tr align="center">
-        <td>3</td>
-        <td>Andika Pratama</td>
-        <td>
-          <img src="assets/images/andika.png" alt="Foto Andika" width="60" />
-        </td>
-        <td>85</td>
-        <td>90</td>
-        <td>95</td>
-      </tr>
-    </table>
-
-    <table
-      class="training"
-    >
-      <tr>
-        <td>1,1</td>
-        <td>1,2</td>
-        <td>1,3</td>
-        <td>1,4</td>
-      </tr>
-
-      <tr>
-        <td>2,1</td>
-        <td colspan="2" rowspan="2">?</td>
-        <td>2,4</td>
-      </tr>
-
-      <tr>
-        <td>3,1</td>
-        <td>3,4</td>
-      </tr>
-
-      <tr>
-        <td>4,1</td>
-        <td>4,2</td>
-        <td>4,3</td>
-        <td>4,4</td>
-      </tr>
-    </table>
   </body>
 </html>

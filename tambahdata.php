@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="assets/style/tambahdata.css" />
     <table class="table">
       <tr>
-        <td><a href="index.html">Home</a></td>
-        <td><a href="contact.html">Contact</a></td>
-        <td><a href="about.html">About</a></td>
-        <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+        <td><a href="index.php">Home</a></td>
+        <td><a href="contact.php">Contact</a></td>
+        <td><a href="about.php">About</a></td>
+        <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
       </tr>
     </table>
     <h2 align="center">Tambah Data</h2>
-    <form action="mahasiswa.html" method="post">
+    <form action="mahasiswa.php" method="post">
       <table class="table">
         <tr>
           <td label="Nama">Nama</label></td>
@@ -57,6 +57,6 @@
     </form>
     <br />
     <br />
-    <a href="mahasiswa.html" class="btn">back</a>
+    <a href="mahasiswa.php" class="btn">back</a>
   </body>
 </html>

@@ -17,10 +17,10 @@
     </center>
     <table class="table">
       <tr>
-          <td><a href="index.html">Home</a></td>
-          <td><a href="contact.html">Contact</a></td>
-          <td><a href="about.html">About</a></td>
-          <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+          <td><a href="index.php">Home</a></td>
+          <td><a href="contact.php">Contact</a></td>
+          <td><a href="about.php">About</a></td>
+          <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
       </tr>
     </table>
 
