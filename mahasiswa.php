@@ -1,3 +1,11 @@
+<?php 
+
+require 'fungsi.php';
+
+$qmahasiswa = "SELECT * FROM mahasiswa";
+$mahasiswas = tampildata($qmahasiswa);
+?>  
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,18 +51,22 @@
         <th>Foto</th>
         <th>Aksi</th>
       </tr>
+      <?php $no = 1; ?>
+      <?php foreach ($mahasiswas as $row) { ?>
       <tr>
-        <td aligh="center">1</td>
-        <td>Andre Junika Yusuf</td>
-        <td>13182420061</td>
-        <td>Informatika</td>
-        <td>andrejunika05@gmail.com</td>
-        <td>089234523523</td>
-        <td><img src="assets/images/andre.png" alt="andre" width="60px"></td>
+        <td aligh="center"><?php echo $no++; ?></td>
+        <td><?php echo $row['nama']; ?></td>
+        <td><?php echo $row['nim']; ?></td>
+        <td><?php echo $row['prodi']; ?></td>
+        <td><?php echo $row['email']; ?></td>
+        <td><?php echo $row['no_hp']; ?></td>
+        <td><img src="assets/images/<?php echo $row['foto']; ?>" alt="foto" width="60px"></td>
         <td>
-          <a href="editdata.php?id=1">Edit</a> |
-          <a href="hapusdata.php?id=1" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+          <a href="editdata.php?id=<?php echo $row['id']; ?>">Edit</a> |
+          <a href="hapusdata.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
         </td>
       </tr>
+      <?php } ?>
+    </table>
   </body>
 </html>
