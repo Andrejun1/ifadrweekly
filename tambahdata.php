@@ -4,7 +4,7 @@ require 'fungsi.php';
 
 if (isset($_POST['submit'])) {
 
-        if (tambahdata($_POST) > 0) {
+        if (tambahdata($_POST, $_FILES) > 0) {
             echo "<script>
                     alert('Data berhasil ditambahkan!');
                     window.location.href = 'mahasiswa.php';
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
   <body>
     <link rel="stylesheet" href="assets/style/tambahdata.css" />
     <h2 align="center">Tambah Data</h2>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
       <table class="table">
         <tr>
           <td label="Nama">Nama</label></td>
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
         <tr>
           <td label="Foto">Foto</label></td>
           <td>:</td>
-          <td><input type="text" name="foto" id="foto" class="input-file" required /></td>
+          <td><input type="file" name="foto" id="foto" class="input-file" accept="image/*" required /></td>
         </tr>
 
         <tr>
