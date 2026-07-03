@@ -2,6 +2,12 @@
 
 require 'fungsi.php';
 
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+$username = $_SESSION['username'];
+
 $qmahasiswa = "SELECT * FROM mahasiswa";
 $mahasiswas = tampildata($qmahasiswa);
 ?>  
@@ -29,6 +35,9 @@ $mahasiswas = tampildata($qmahasiswa);
           <td><a href="contact.php">Contact</a></td>
           <td><a href="about.php">About</a></td>
           <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+          <td><a href="login.php">Login</a></td>
+          <td><a href="logout.php">Logout</a></td>
+          
       </tr>
     </table>
 

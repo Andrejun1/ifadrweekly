@@ -21,6 +21,8 @@
           <td><a href="contact.php">Contact</a></td>
           <td><a href="about.php">About</a></td>
           <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+          <td><a href="login.php">Login</a></td>
+          <td><a href="logout.php">Logout</a></td>
       </tr>
     </table>
     <h2>About Us</h2>

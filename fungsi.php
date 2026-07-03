@@ -4,6 +4,22 @@ $koneksi = mysqli_connect("localhost", "root", "root", "ifadrweekly");
 if (!$koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+class AuthSystem {
+    public function checkLogin() {
+        if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+            header("Location: login.php");
+            exit();
+        }
+    }
+    
+    public function isLoggedIn() {
+        return isset($_SESSION['login']) && $_SESSION['login'] === true;
+    }
+}
 function tampildata($query) {
     global $koneksi;
     $result = mysqli_query($koneksi, $query);
@@ -164,4 +180,64 @@ function updatedata($id, $nama, $nim, $prodi, $email, $no_hp, $foto_lama) {
     }
 }
 
+function register($data)
+{
+    global $koneksi;
+    
+    $username = strtolower(stripcslashes($data['username']));
+    $password1 = mysqli_real_escape_string($koneksi,$data['password1']);
+    $password2 = mysqli_real_escape_string($koneksi,$data['password2']);
+    
+     $result = mysqli_query($koneksi, "SELECT username FROM user WHERE username = '$username'");
+    if(mysqli_fetch_assoc($result))
+    {
+        echo "<script>alert('Username sudah terdaftar!');</script>";
+        return false;
+    }
+    
+    if($password1 !== $password2)
+    {
+        echo "<script>alert('Konfirmasi password tidak cocok!');</script>";
+        return false;
+    }
+
+    $password = password_hash($password1, PASSWORD_DEFAULT);
+    
+    $query = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+    mysqli_query($koneksi, $query);
+    
+    return mysqli_affected_rows($koneksi);
+}
+
+function login($data)
+{
+    global $koneksi;
+    
+    $username = strtolower(stripcslashes($data['username']));
+    $password = mysqli_real_escape_string($koneksi,$data['password']);
+    
+    $result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
+    
+    if(mysqli_num_rows($result) === 1)
+    {
+        $row = mysqli_fetch_assoc($result);
+        
+        if(password_verify($password, $row['password']))
+        {
+            $_SESSION['login'] = true;
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['id'] = $row['id'];
+            
+            return true;
+        }
+        else
+        {
+            return "Password salah!";
+        }
+    }
+    else
+    {
+        return "Username tidak ditemukan!";
+    }
+}
 ?>
